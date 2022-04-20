@@ -12,6 +12,9 @@ const routes: Routes = [
         path: 'regions', loadChildren: () => import('../region/region.module').then(m => m.RegionModule)
       },
       {
+        path: 'regions/:name', loadChildren: () => import('../countries/countries.module').then(m => m.CountriesModule),
+      },
+      {
         path: '**', redirectTo: 'regions'
       }
     ]
