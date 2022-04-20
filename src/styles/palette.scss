@@ -1,0 +1,29 @@
+@import "~@angular/material/theming";
+
+$lighter-blue: map_get($mat-blue, 50);
+$light-blue: map_get($mat-blue, 300);
+$blue: map_get($mat-blue, 700);
+$dark-blue: map_get($mat-blue, 900);
+
+$light-green: map_get($mat-green, 300);
+$green: map_get($mat-green, 700);
+$dark-green: map_get($mat-green, 900);
+
+$light-yellow: map_get($mat-amber, 300);
+$yellow: map_get($mat-amber, 700);
+$dark-yellow: map_get($mat-amber, 900);
+
+$light-red: map_get($mat-red, 300);
+$red: map_get($mat-red, 700);
+$dark-red: map_get($mat-red, 900);
+
+$light-purple: map_get($mat-purple, 500);
+$purple: map_get($mat-purple, 700);
+$dark-purple: map_get($mat-purple, 900);
+
+$light-pink: map-get($mat-pink, 500);
+$pink: map-get($mat-pink, 700);
+$dark-pink: map-get($mat-pink, 900);
+
+
+$azure: #04c2bf;

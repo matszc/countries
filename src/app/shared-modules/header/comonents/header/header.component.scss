@@ -1,0 +1,8 @@
+@import "src/styles/palette";
+
+:host {
+  position: sticky;
+}
+.header-toolbar {
+  background-color: $light-pink;
+}

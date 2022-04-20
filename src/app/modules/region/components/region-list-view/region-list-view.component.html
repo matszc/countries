@@ -1,0 +1,7 @@
+<app-card title="Select region">
+  <div fxLayout="row wrap" fxLayoutAlign="space-around">
+    <ng-container *ngFor="let region of regions$ | async">
+      <a type="button" class="region-button" mat-raised-button color="primary">{{region.name}}</a>
+    </ng-container>
+  </div>
+</app-card>

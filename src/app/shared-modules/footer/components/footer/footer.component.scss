@@ -1,0 +1,11 @@
+@import "src/styles/palette";
+
+:host {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-toolbar {
+  background-color: $light-pink;
+}
