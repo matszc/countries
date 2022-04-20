@@ -1,0 +1,16 @@
+<app-card [title]="country.name.common">
+  <p fxLayout="row">
+    <span fxFlex="33%">Capital City</span>
+    <span fxFlex="66%">{{country.capital | join: ', '}}</span>
+  </p>
+  <mat-divider></mat-divider>
+  <p>
+    <span fxFlex="33%">Currency</span>
+    <span fxFlex="66%">
+      <ng-container *ngFor="let obj of country.currencies | toMap | keyvalue">
+        {{obj.value.name}} ({{obj.value.symbol}})
+      </ng-container>
+    </span>
+  </p>
+  <mat-divider></mat-divider>
+</app-card>

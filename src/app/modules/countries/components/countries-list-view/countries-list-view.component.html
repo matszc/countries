@@ -1,4 +1,4 @@
-<app-card [title]="titlePrefix + ' ' + (regionName | firstLetterUppercase)">
+<app-card [title]="titlePrefix + (regionName | firstLetterUppercase)">
   <div class="list-wrapper">
     <app-countries-list [countries]="countries"></app-countries-list>
   </div>

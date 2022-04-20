@@ -16,7 +16,7 @@ export class CountriesListResolver implements Resolve<CountryModel[]> {
   }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<CountryModel[]> | Promise<CountryModel[]> | CountryModel[] {
-    return this.countriesService.getCountries(route.paramMap.get('name') as string).pipe(
+    return this.countriesService.getCountries(route.paramMap.get('region') as string).pipe(
       catchError(err => {
         this.router.navigate(['regions']);
         throw err;

@@ -1,4 +1,4 @@
-import { FirstLetterUppercasePipe } from './first-letter-uppercase.pipe';
+import {FirstLetterUppercasePipe} from './first-letter-uppercase.pipe';
 
 describe('FirstLetterUppercasePipe', () => {
   it('create an instance', () => {

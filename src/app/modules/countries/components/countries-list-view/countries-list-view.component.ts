@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {CountryModel} from "../../models/country.model";
 
@@ -9,7 +9,7 @@ import {CountryModel} from "../../models/country.model";
 })
 export class CountriesListViewComponent implements OnInit {
 
-  readonly titlePrefix: string = 'Region:';
+  readonly titlePrefix: string = 'Region: ';
   regionName: string = '';
   countries: CountryModel[] = []
 
@@ -18,7 +18,7 @@ export class CountriesListViewComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.regionName = this.route.snapshot.paramMap.get('name') as string;
+    this.regionName = this.route.snapshot.paramMap.get('region') as string;
     this.countries = this.route.snapshot.data['countries'];
   }
 

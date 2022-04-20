@@ -1,5 +1,5 @@
 <mat-nav-list class="list">
-  <a mat-list-item *ngFor="let country of countries" [routerLink]="['/']">
+  <a mat-list-item *ngFor="let country of countries" [routerLink]="[country.name.common | lowercase]">
     <img mat-list-avatar [src]="country.flags.svg" [alt]="country.name.common">
     <div mat-line>{{country.name.common}}</div>
     <div mat-line>{{country.continents | join: ', '}}</div>
