@@ -1,0 +1,17 @@
+<div fxLayout="column" fxLayoutAlign="space-between">
+  <span mat-dialog-title class="dialog-title">{{title}}</span>
+  <div mat-dialog-content class="dialog-content" fxLayout="row">
+    <ng-container *ngIf="data$ | async as data">
+      <dl fxLayout="row wrap">
+        <dt class="data-title">Autor:</dt>
+        <dd class="data-description">{{data.author}}</dd>
+        <dt class="data-title">Github:</dt>
+        <dd class="data-description"><a [href]="data.repository" target="_blank">Github repository</a></dd>
+      </dl>
+    </ng-container>
+  </div>
+
+  <footer mat-dialog-actions fxLayoutAlign="center">
+    <button mat-raised-button color="primary" (click)="close()">Zamknij</button>
+  </footer>
+</div>

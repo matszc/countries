@@ -17,11 +17,7 @@ export class BackButtonComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.url$ = this.backLocationRouteService.backLocation$.pipe(
-      tap(v => {
-        console.log(v);
-      })
-    )
+    this.url$ = this.backLocationRouteService.backLocation$;
   }
 
 }
