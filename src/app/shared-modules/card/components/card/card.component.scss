@@ -1,0 +1,12 @@
+@import "/src/styles/palette";
+
+.app-card-header {
+  height: 35px;
+  width: fit-content;
+  border-radius: 3px;
+  background: $light-pink;
+  padding: 12px 20px;
+  margin-left: 20px;
+  word-wrap: break-word;
+  margin-right: 10px;
+}
