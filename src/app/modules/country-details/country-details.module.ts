@@ -7,11 +7,13 @@ import {CardModule} from "../../shared-modules/card/card.module";
 import {MatDividerModule} from "@angular/material/divider";
 import {FlexModule} from "@angular/flex-layout";
 import {BaseModule} from "../../shared-modules/base/base.module";
+import { PopulationPipe } from './pipes/population.pipe';
 
 
 @NgModule({
   declarations: [
-    CountryDetailsViewComponent
+    CountryDetailsViewComponent,
+    PopulationPipe
   ],
   imports: [
     CommonModule,

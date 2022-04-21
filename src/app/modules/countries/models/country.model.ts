@@ -9,4 +9,6 @@ export interface CountryModel {
   flags: CountryFlag;
   currencies: { [key: string]: CurrencyModel }
   languages: { [key: string]: string }
+  cca3: string;
+  population: number;
 }

@@ -1,16 +1,47 @@
 <app-card [title]="country.name.common">
-  <p fxLayout="row">
-    <span fxFlex="33%">Capital City</span>
-    <span fxFlex="66%">{{country.capital | join: ', '}}</span>
-  </p>
+  <div class="country-desc" fxLayout="row wrap" fxLayoutAlign="space-around center">
+    <img class="country-flag" [src]="country.flags.png" [alt]="country.name.common"/>
+    <div class="country-shortcut">
+      {{country.cca3}}</div>
+  </div>
   <mat-divider></mat-divider>
-  <p>
-    <span fxFlex="33%">Currency</span>
-    <span fxFlex="66%">
-      <ng-container *ngFor="let obj of country.currencies | toMap | keyvalue">
-        {{obj.value.name}} ({{obj.value.symbol}})
-      </ng-container>
-    </span>
-  </p>
-  <mat-divider></mat-divider>
+
+  <ng-container [ngTemplateOutlet]="countryProperty"
+                [ngTemplateOutletContext]="{title: 'Capital City:', desc: country.capital | join: ', '}">
+
+  </ng-container>
+
+  <ng-container [ngTemplateOutlet]="countryProperty"
+                [ngTemplateOutletContext]="{title: 'Currency:', desc: country.currencies | toMap | keyvalue | map: currencyMapFun | join: ', '}">
+
+  </ng-container>
+
+  <ng-container [ngTemplateOutlet]="countryProperty"
+                [ngTemplateOutletContext]="{title: 'Population:', desc: country.population | population}">
+
+  </ng-container>
+
+  <!--  <p fxLayout="row">
+      <span fxFlex="33%">Capital City</span>
+      <span fxFlex="66%">{{country.capital | join: ', '}}</span>
+    </p>
+    <mat-divider></mat-divider>
+
+    <mat-divider></mat-divider>-->
 </app-card>
+
+
+<ng-template #countryProperty let-title='title' let-decs='desc'>
+  <div class="div" fxLayout="row">
+    <div class="country-property" fxFlex="30" fxFlex.gt-md="60" fxFlex.lt-lg="50" fxFlex.lt-sm="100" fxLayout="row wrap"
+         fxLayoutAlign="space-between center">
+      <div class="country-property-title">
+        <span>{{title}}</span>
+      </div>
+      <div class="country-property-desc">
+        <span>{{decs}}</span>
+      </div>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+</ng-template>

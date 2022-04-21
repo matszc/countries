@@ -1,0 +1,27 @@
+.country-desc {
+  margin: 10px;
+    .country-flag {
+      max-height: 250px;
+    }
+
+  .country-shortcut {
+    text-align: center;
+    font-size: 4rem;
+    color: silver;
+    margin: 30px;
+  }
+}
+
+.country-property {
+  margin: 10px;
+  padding: 7px;
+  font-size: 1.2rem;
+  /*width: 30%;*/
+  .country-property-title {
+    font-weight: 500;
+    margin: 5px;
+  }
+  .country-property-desc {
+    margin: 5px;
+  }
+}

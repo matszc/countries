@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {CountryModel} from "../../../countries/models/country.model";
 import {ActivatedRoute} from "@angular/router";
+import {KeyValue} from "@angular/common";
+import {CurrencyModel} from "../../../countries/models/currency.model";
 
 @Component({
   selector: 'app-country-details-view',
@@ -18,6 +20,10 @@ export class CountryDetailsViewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  currencyMapFun(currency: KeyValue<string, CurrencyModel>): string {
+    return currency.value.name
   }
 
 }
