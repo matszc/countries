@@ -1,7 +1,7 @@
 <app-card title="Select region">
-  <div fxLayout="row wrap" fxLayoutAlign="space-around">
+  <div fxLayout="row wrap" fxLayoutAlign="space-around" fxLayoutGap="10">
     <ng-container *ngFor="let region of regions$ | async">
-      <a type="button" [routerLink]="region.name | lowercase" class="region-button" mat-raised-button color="primary">{{region.name}}</a>
+      <a type="button" [routerLink]="region.name | lowercase" class="region-button" fxFlex.lt-md="100" fxFlex="45" mat-raised-button color="primary">{{region.name}}</a>
     </ng-container>
   </div>
 </app-card>
