@@ -9,15 +9,24 @@ const routes: Routes = [
         path: '', redirectTo: 'regions', pathMatch: 'full',
       },
       {
-        path: 'regions', loadChildren: () => import('../region/region.module').then(m => m.RegionModule)
+        path: 'regions', loadChildren: () => import('../region/region.module').then(m => m.RegionModule),
+        data: {
+          backLocation: '/'
+        }
       },
       {
         path: 'regions/:region',
         loadChildren: () => import('../countries/countries.module').then(m => m.CountriesModule),
+        data: {
+          backLocation: 'regions/'
+        }
       },
       {
         path: 'regions/:region/:country',
-        loadChildren: () => import('../country-details/country-details.module').then(m => m.CountryDetailsModule)
+        loadChildren: () => import('../country-details/country-details.module').then(m => m.CountryDetailsModule),
+        data: {
+          backLocation: 'regions/:region'
+        }
       },
       {
         path: '**', redirectTo: 'regions'
