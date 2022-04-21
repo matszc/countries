@@ -13,6 +13,8 @@ export class CountriesListViewComponent implements OnInit {
   regionName: string = '';
   countries: CountryModel[] = []
 
+  filter: string = '';
+
   constructor(
     private route: ActivatedRoute
   ) { }
@@ -20,6 +22,10 @@ export class CountriesListViewComponent implements OnInit {
   ngOnInit(): void {
     this.regionName = this.route.snapshot.paramMap.get('region') as string;
     this.countries = this.route.snapshot.data['countries'];
+  }
+
+  applyFilter(val: string) {
+    this.filter = val;
   }
 
 }

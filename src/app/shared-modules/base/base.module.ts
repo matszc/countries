@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {FirstLetterUppercasePipe} from "./pipes/first-letter-uppercase.pipe";
 import {JoinPipe} from "./pipes/join.pipe";
 import {ToMapPipe} from './pipes/to-map.pipe';
-import { MapPipe } from './pipes/map.pipe';
+import {MapPipe} from './pipes/map.pipe';
 
 
 @NgModule({
