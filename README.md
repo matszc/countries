@@ -1,5 +1,5 @@
 # LIVE
-https://matszc.github.io/countries/regions/americas
+https://matszc.github.io/countries
 
 # Countries
 
